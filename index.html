@@ -720,7 +720,7 @@ h1{
 
 
 <body>
-
+<audio id="birthdayMusic" src="birthday.mp3" loop></audio>
 
 <!-- =========================
      CINEMATIC COUNTDOWN
@@ -916,6 +916,11 @@ setInterval(() => {
 ========================= */
 
 function openGift(){
+   const music = document.getElementById("birthdayMusic");
+
+   music.volume = 0.7;
+
+   music.play().catch(() => {});
 
     const gift =
         document.getElementById("giftArea");
